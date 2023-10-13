@@ -10,12 +10,12 @@ function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
     if (playerSelection == computerSelection) {
-        return console.log(`You Tied! You both selected ${computerSelection}.`);
+        return console.log(`You Tied! You both selected ${computerSelection[0].toUpperCase()}${computerSelection.slice(1)}.`);
     }
 
     return console.log("Try Again.");;
 }
 
-let playerSelection = "ROck";
+let playerSelection = "PaPer";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
