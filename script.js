@@ -1,1 +1,5 @@
 // script.js
+
+function getComputerChoice () {
+
+}
