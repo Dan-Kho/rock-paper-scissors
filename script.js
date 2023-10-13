@@ -2,7 +2,7 @@
 
 function getComputerChoice () {
     let rand = Math.floor(Math.random() * 3);
-    let choice = (rand == 0) ? "Rock" : (rand == 1) ? "Paper" : "Scissors";
+    let choice = (rand == 0) ? "rock" : (rand == 1) ? "paper" : "scissors";
     return choice;
 }
 
