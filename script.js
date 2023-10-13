@@ -7,11 +7,15 @@ function getComputerChoice () {
 }
 
 function playRound (playerSelection, computerSelection) {
-    let playerSelection = playerSelection.toLowerCase();
+    playerSelection = playerSelection.toLowerCase();
 
-    return playerSelection;
+    if (playerSelection == computerSelection) {
+        return console.log(`You Tied! You both selected ${computerSelection}.`);
+    }
+
+    return console.log("Try Again.");;
 }
 
-const playerSelection = "rock";
+let playerSelection = "ROck";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
