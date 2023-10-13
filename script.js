@@ -6,8 +6,10 @@ function getComputerChoice () {
     return choice;
 }
 
-function singleRound (playerSelection, computerSelection) {
+function playRound (playerSelection, computerSelection) {
     let playerSelection = playerSelection.toLowerCase();
+
+    return playerSelection;
 }
 
 const playerSelection = "rock";
