@@ -20,9 +20,9 @@ function playRound (playerSelection, computerSelection) {
     } else if (playerSelection == "scissors") {
         if (computerSelection == "rock") return "You Lose! Rock beats Scissors.";
         else return "You Win! Scissors beats Paper.";
-    } else return "Incorrect Error. Try Again!";
+    } else return "Incorrect Input. Try Again!";
 }
 
-let playerSelection = "PaPer";
+let playerSelection = "Scissors";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
