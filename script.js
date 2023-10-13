@@ -26,3 +26,7 @@ function playRound (playerSelection, computerSelection) {
 let playerSelection = "Scissors";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
+
+function game () {
+    
+}
