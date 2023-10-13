@@ -7,5 +7,9 @@ function getComputerChoice () {
 }
 
 function singleRound (playerSelection, computerSelection) {
-
+    let playerSelection = playerSelection.toLowerCase();
 }
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
