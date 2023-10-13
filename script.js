@@ -23,10 +23,37 @@ function playRound (playerSelection, computerSelection) {
     } else return "Incorrect Input. Try Again!";
 }
 
-let playerSelection = "Scissors";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function roundResults (result, playerScore, computerScore) {
+    console.log(result);
+    console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
+    return;
+}
 
 function game () {
+    let playerSelection = "Scissors";
     
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        let computerSelection = getComputerChoice();
+        let result = playRound(playerSelection, computerSelection);
+        if (result.search("Tied") === 4) {
+            roundResults (result, playerScore, computerScore);
+            continue;
+        } else if (result.search("Win") === 4) {
+            playerScore++;
+            roundResults (result, playerScore, computerScore);
+        } else if (result.search("Lose") === 4) {
+            computerScore++;
+            roundResults (result, playerScore, computerScore);
+        } else {
+            roundResults (result, playerScore, computerScore);
+            continue;
+        }
+    }
+
+    return playerScore;
 }
+
+console.log(game());
