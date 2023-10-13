@@ -5,3 +5,7 @@ function getComputerChoice () {
     let choice = (rand == 0) ? "Rock" : (rand == 1) ? "Paper" : "Scissors";
     return choice;
 }
+
+function singleRound (playerSelection, computerSelection) {
+
+}
