@@ -53,7 +53,9 @@ function game () {
         }
     }
 
-    return playerScore;
+    if (playerScore === computerScore) { return "Game Over. You Tied!";}
+    else if (playerScore > computerScore) {return "Game Over. You Win!";}
+    else {return "Game Over. You Lose!";}
 }
 
 console.log(game());
