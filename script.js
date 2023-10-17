@@ -33,7 +33,7 @@ function roundResults (result, playerScore, computerScore) {
 
 // Plays a single round of rock, paper, scissors
 function playRound (playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
+    playerSelection = getPlayerChoice();
 
     if (playerSelection == computerSelection) {
         return `You Tied! You both selected ${computerSelection[0].toUpperCase()}${computerSelection.slice(1)}.`;
@@ -49,6 +49,7 @@ function playRound (playerSelection, computerSelection) {
     } else return "Incorrect Input. Try Again!";
 }
 
+// Plays 5 rounds of rock, paper scissors
 function game () {
     let playerSelection = prompt;
     
