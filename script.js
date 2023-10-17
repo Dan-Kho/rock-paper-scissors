@@ -1,11 +1,13 @@
 // script.js
 
+// Get random value to select either rock, paper, or scissors
 function getComputerChoice () {
     let rand = Math.floor(Math.random() * 3);
     let choice = (rand == 0) ? "rock" : (rand == 1) ? "paper" : "scissors";
     return choice;
 }
 
+// Prompt user for choice. If invalid input, alert user and ask for input again until it is correct
 function getPlayerChoice () {
     let incorrectInput = true;
 
@@ -22,12 +24,14 @@ function getPlayerChoice () {
     }
 }
 
+// Print out round results
 function roundResults (result, playerScore, computerScore) {
     console.log(result);
     console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
     return;
 }
 
+// Plays a single round of rock, paper, scissors
 function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
