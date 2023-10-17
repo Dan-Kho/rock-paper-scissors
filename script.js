@@ -6,6 +6,22 @@ function getComputerChoice () {
     return choice;
 }
 
+function getPlayerChoice () {
+    let incorrectInput = true;
+
+    while (incorrectInput) {
+        let playerChoice = prompt("Rock, Paper, Scissors?")
+        playerChoice = playerChoice.toLowerCase();
+
+        if (playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors") {
+            incorrectInput = false;
+            return playerChoice;
+        } else { 
+            alert("Error! Incorrect Input! Please try again.")
+        }
+    }
+}
+
 function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
@@ -30,7 +46,7 @@ function roundResults (result, playerScore, computerScore) {
 }
 
 function game () {
-    let playerSelection = "Scissors";
+    let playerSelection = prompt;
     
     let playerScore = 0;
     let computerScore = 0;
