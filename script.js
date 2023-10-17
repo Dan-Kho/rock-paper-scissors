@@ -22,6 +22,12 @@ function getPlayerChoice () {
     }
 }
 
+function roundResults (result, playerScore, computerScore) {
+    console.log(result);
+    console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
+    return;
+}
+
 function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
@@ -37,12 +43,6 @@ function playRound (playerSelection, computerSelection) {
         if (computerSelection == "rock") return "You Lose! Rock beats Scissors.";
         else return "You Win! Scissors beats Paper.";
     } else return "Incorrect Input. Try Again!";
-}
-
-function roundResults (result, playerScore, computerScore) {
-    console.log(result);
-    console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
-    return;
 }
 
 function game () {
